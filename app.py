@@ -48,6 +48,11 @@ STOP_LOSS_PCT = 0.15
 st.markdown(
     """
     <style>
+    .stApp {
+        background-color: #0b0f14;
+        color: #e5e7eb;
+    }
+
     .block-container {
         padding-top: 1.2rem;
         padding-bottom: 2rem;
@@ -60,7 +65,8 @@ st.markdown(
         background: #111827;
         color: #ffffff;
         margin-bottom: 1.3rem;
-        border: 1px solid #1f2937;
+        border: 1px solid #243244;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
     .dashboard-title {
@@ -68,6 +74,7 @@ st.markdown(
         font-weight: 800;
         margin-bottom: 0.35rem;
         letter-spacing: -0.02em;
+        color: #ffffff;
     }
 
     .dashboard-subtitle {
@@ -82,7 +89,7 @@ st.markdown(
         margin-top: 0.8rem;
         padding: 0.35rem 0.75rem;
         border-radius: 999px;
-        background: #f3f4f6;
+        background: #ffffff;
         color: #111827;
         font-size: 0.78rem;
         font-weight: 700;
@@ -91,13 +98,13 @@ st.markdown(
     .section-title {
         font-size: 1.25rem;
         font-weight: 800;
-        color: #111827;
+        color: #f9fafb;
         margin-top: 1.4rem;
         margin-bottom: 0.2rem;
     }
 
     .section-caption {
-        color: #6b7280;
+        color: #9ca3af;
         font-size: 0.9rem;
         margin-bottom: 0.9rem;
     }
@@ -107,12 +114,12 @@ st.markdown(
         border: 1px solid #e5e7eb;
         border-radius: 14px;
         padding: 1rem;
-        color: #374151;
+        color: #111827;
         font-size: 0.92rem;
     }
 
     .warning-box {
-        background: #fffbeb;
+        background: #fff7ed;
         border: 1px solid #fde68a;
         border-radius: 14px;
         padding: 1rem;
@@ -125,38 +132,62 @@ st.markdown(
         border: 1px solid #e5e7eb;
         padding: 1rem;
         border-radius: 14px;
-        box-shadow: 0 4px 14px rgba(17, 24, 39, 0.05);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.18);
     }
 
     div[data-testid="stMetricLabel"] {
         font-size: 0.82rem;
-        color: #6b7280;
+        color: #374151 !important;
+        font-weight: 600;
     }
 
     div[data-testid="stMetricValue"] {
         font-size: 1.35rem;
         font-weight: 800;
-        color: #111827;
+        color: #111827 !important;
+    }
+
+    div[data-testid="stMetricDelta"] {
+        color: #111827 !important;
+    }
+
+    section[data-testid="stSidebar"] {
+        background-color: #252631;
+    }
+
+    section[data-testid="stSidebar"] * {
+        color: #f9fafb;
+    }
+
+    .stButton > button {
+        background-color: #ef4444;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        height: 3rem;
+    }
+
+    .stButton > button:hover {
+        background-color: #dc2626;
+        color: white;
     }
 
     .stTabs [data-baseweb="tab-list"] {
         gap: 0.4rem;
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid #374151;
     }
 
     .stTabs [data-baseweb="tab"] {
         padding: 0.55rem 1rem;
         border-radius: 10px 10px 0 0;
         font-weight: 600;
+        color: #e5e7eb;
     }
 
     .stTabs [aria-selected="true"] {
-        background-color: #111827;
-        color: white;
-    }
-
-    .dataframe {
-        font-size: 0.9rem;
+        background-color: #ffffff;
+        color: #111827;
     }
     </style>
     """,
