@@ -42,7 +42,7 @@ STOP_LOSS_PCT = 0.15
 
 
 # ============================================================
-# PROFESSIONAL CSS
+# CSS
 # ============================================================
 
 st.markdown(
@@ -56,107 +56,94 @@ st.markdown(
     .block-container {
         padding-top: 1.2rem;
         padding-bottom: 2rem;
-        max-width: 1450px;
-    }
-
-    .dashboard-header {
-        padding: 1.7rem 1.8rem;
-        border-radius: 18px;
-        background: #111827;
-        color: #ffffff;
-        margin-bottom: 1.3rem;
-        border: 1px solid #243244;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .dashboard-title {
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 0.35rem;
-        letter-spacing: -0.02em;
-        color: #ffffff;
-    }
-
-    .dashboard-subtitle {
-        color: #d1d5db;
-        font-size: 0.98rem;
-        max-width: 900px;
-        line-height: 1.5;
-    }
-
-    .strategy-chip {
-        display: inline-block;
-        margin-top: 0.8rem;
-        padding: 0.35rem 0.75rem;
-        border-radius: 999px;
-        background: #ffffff;
-        color: #111827;
-        font-size: 0.78rem;
-        font-weight: 700;
-    }
-
-    .section-title {
-        font-size: 1.25rem;
-        font-weight: 800;
-        color: #f9fafb;
-        margin-top: 1.4rem;
-        margin-bottom: 0.2rem;
-    }
-
-    .section-caption {
-        color: #9ca3af;
-        font-size: 0.9rem;
-        margin-bottom: 0.9rem;
-    }
-
-    .info-box {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 14px;
-        padding: 1rem;
-        color: #111827;
-        font-size: 0.92rem;
-    }
-
-    .warning-box {
-        background: #fff7ed;
-        border: 1px solid #fde68a;
-        border-radius: 14px;
-        padding: 1rem;
-        color: #92400e;
-        font-size: 0.92rem;
-    }
-
-    div[data-testid="stMetric"] {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        padding: 1rem;
-        border-radius: 14px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-    }
-
-    div[data-testid="stMetricLabel"] {
-        font-size: 0.82rem;
-        color: #374151 !important;
-        font-weight: 600;
-    }
-
-    div[data-testid="stMetricValue"] {
-        font-size: 1.35rem;
-        font-weight: 800;
-        color: #111827 !important;
-    }
-
-    div[data-testid="stMetricDelta"] {
-        color: #111827 !important;
+        max-width: 1380px;
     }
 
     section[data-testid="stSidebar"] {
-        background-color: #252631;
+        background-color: #1f212b;
     }
 
     section[data-testid="stSidebar"] * {
         color: #f9fafb;
+    }
+
+    .dashboard-header {
+        padding: 1.35rem 1.5rem;
+        border-radius: 16px;
+        background: #111827;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        border: 1px solid #243244;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+    }
+
+    .dashboard-title {
+        font-size: 1.9rem;
+        font-weight: 800;
+        margin-bottom: 0.3rem;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+    }
+
+    .dashboard-subtitle {
+        color: #d1d5db;
+        font-size: 0.96rem;
+        max-width: 950px;
+        line-height: 1.45;
+    }
+
+    .section-title {
+        font-size: 1.18rem;
+        font-weight: 800;
+        color: #f9fafb;
+        margin-top: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .section-caption {
+        color: #9ca3af;
+        font-size: 0.88rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .info-box {
+        background: #111827;
+        border: 1px solid #253044;
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        color: #e5e7eb;
+        font-size: 0.92rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .warning-box {
+        background: #2a1f0d;
+        border: 1px solid #b45309;
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        color: #fcd34d;
+        font-size: 0.92rem;
+        margin-top: 0.9rem;
+    }
+
+    div[data-testid="stMetric"] {
+        background: #111827;
+        border: 1px solid #253044;
+        padding: 0.95rem;
+        border-radius: 14px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    div[data-testid="stMetricLabel"] {
+        font-size: 0.82rem;
+        color: #9ca3af !important;
+        font-weight: 600;
+    }
+
+    div[data-testid="stMetricValue"] {
+        font-size: 1.32rem;
+        font-weight: 800;
+        color: #f9fafb !important;
     }
 
     .stButton > button {
@@ -164,8 +151,8 @@ st.markdown(
         color: white;
         border-radius: 10px;
         border: none;
-        font-weight: 700;
-        height: 3rem;
+        font-weight: 800;
+        height: 2.9rem;
     }
 
     .stButton > button:hover {
@@ -253,7 +240,7 @@ def download_stock_data(ticker, start_date):
 
 
 # ============================================================
-# INDICATORS + 4-RULE STRATEGY
+# STRATEGY
 # ============================================================
 
 RULE_COLUMNS = {
@@ -270,7 +257,6 @@ def add_indicators(df):
     df["SMA_50"] = df["Close"].rolling(SMA_50).mean()
     df["SMA_150"] = df["Close"].rolling(SMA_150).mean()
     df["EMA_220"] = df["Close"].ewm(span=EMA_220, adjust=False).mean()
-
     df["Low_52W"] = df["Low"].rolling(LOOKBACK_52W).min()
 
     df["Rule_1_150SMA_GT_220EMA"] = df["SMA_150"] > df["EMA_220"]
@@ -282,14 +268,8 @@ def add_indicators(df):
     df["Score_%"] = (df["Rules_Passed"] / 4) * 100
 
     df["Signal_Status"] = np.select(
-        [
-            df["Rules_Passed"] == 4,
-            df["Rules_Passed"] == 3,
-        ],
-        [
-            "BUY CANDIDATE",
-            "WATCHLIST",
-        ],
+        [df["Rules_Passed"] == 4, df["Rules_Passed"] == 3],
+        ["BUY CANDIDATE", "WATCHLIST"],
         default="AVOID",
     )
 
@@ -350,10 +330,9 @@ def build_signal_table(stock_data):
     if not result.empty:
         status_rank = {"BUY CANDIDATE": 1, "WATCHLIST": 2, "AVOID": 3}
         result["Status Rank"] = result["Status"].map(status_rank)
-
         result = result.sort_values(
-            by=["Status Rank", "Rules Passed", "Score %", "% Above 50 SMA"],
-            ascending=[True, False, False, False],
+            by=["Status Rank", "Rules Passed", "Score %"],
+            ascending=[True, False, False],
         ).drop(columns=["Status Rank"])
 
     return result
@@ -361,16 +340,7 @@ def build_signal_table(stock_data):
 
 def calculate_market_breadth(signal_df):
     if signal_df.empty:
-        return {
-            "Total Stocks": 0,
-            "Buy Candidates": 0,
-            "Watchlist": 0,
-            "Avoid": 0,
-            "% Buy Candidates": 0,
-            "% Watchlist": 0,
-            "% Above 50 SMA": 0,
-            "% Above 220 EMA": 0,
-        }
+        return {}
 
     total = len(signal_df)
     buy = len(signal_df[signal_df["Status"] == "BUY CANDIDATE"])
@@ -378,7 +348,7 @@ def calculate_market_breadth(signal_df):
     avoid = len(signal_df[signal_df["Status"] == "AVOID"])
 
     above_50 = signal_df["Close > 50 SMA"].sum()
-    above_220 = signal_df["150 SMA > 220 EMA"].sum()
+    trend_positive = signal_df["150 SMA > 220 EMA"].sum()
 
     return {
         "Total Stocks": total,
@@ -388,7 +358,7 @@ def calculate_market_breadth(signal_df):
         "% Buy Candidates": round((buy / total) * 100, 2),
         "% Watchlist": round((watch / total) * 100, 2),
         "% Above 50 SMA": round((above_50 / total) * 100, 2),
-        "% Above 220 EMA": round((above_220 / total) * 100, 2),
+        "% Trend Positive": round((trend_positive / total) * 100, 2),
     }
 
 
@@ -407,7 +377,6 @@ def run_backtest(stock_data, backtest_start_date):
 
     for current_date in all_dates:
 
-        # exits
         for symbol in list(positions.keys()):
             df = stock_data[symbol]
             row = df[df["Date"] == current_date]
@@ -448,7 +417,6 @@ def run_backtest(stock_data, backtest_start_date):
 
                 del positions[symbol]
 
-        # entries: enter next day open after 4/4 signal
         max_allocation = INITIAL_CAPITAL * MAX_POSITION_PCT
 
         for symbol, df in stock_data.items():
@@ -493,7 +461,6 @@ def run_backtest(stock_data, backtest_start_date):
                 "Invested": invested,
             }
 
-        # portfolio value
         portfolio_value = cash
 
         for symbol, position in positions.items():
@@ -546,7 +513,6 @@ def calculate_summary(trades_df, portfolio_df):
         profit_factor = gross_profit / gross_loss if gross_loss > 0 else 0
 
     return {
-        "Initial Capital": INITIAL_CAPITAL,
         "Final Portfolio Value": round(final_value, 2),
         "Total Return %": round(total_return * 100, 2),
         "Max Drawdown %": round(max_drawdown * 100, 2),
@@ -562,6 +528,18 @@ def calculate_summary(trades_df, portfolio_df):
 # CHARTS
 # ============================================================
 
+def apply_chart_layout(fig, height=390):
+    fig.update_layout(
+        template="plotly_dark",
+        height=height,
+        paper_bgcolor="#0b0f14",
+        plot_bgcolor="#0b0f14",
+        font=dict(color="#e5e7eb"),
+        margin=dict(l=20, r=20, t=55, b=35),
+    )
+    return fig
+
+
 def status_donut_chart(signal_df):
     status_counts = signal_df["Status"].value_counts().reset_index()
     status_counts.columns = ["Status", "Count"]
@@ -570,29 +548,15 @@ def status_donut_chart(signal_df):
         status_counts,
         names="Status",
         values="Count",
-        hole=0.55,
+        hole=0.58,
         title="Signal Classification",
     )
 
-    fig.update_layout(
-        height=390,
-        template="plotly_white",
-        margin=dict(l=20, r=20, t=55, b=20),
-        legend_title_text="",
-    )
-
-    return fig
+    return apply_chart_layout(fig, 380)
 
 
 def rule_pass_chart(signal_df):
-    rows = []
-
-    for rule in RULE_COLUMNS.keys():
-        rows.append({
-            "Rule": rule,
-            "Passed Stocks": int(signal_df[rule].sum()),
-        })
-
+    rows = [{"Rule": rule, "Passed Stocks": int(signal_df[rule].sum())} for rule in RULE_COLUMNS.keys()]
     df = pd.DataFrame(rows)
 
     fig = px.bar(
@@ -602,38 +566,14 @@ def rule_pass_chart(signal_df):
         text="Passed Stocks",
         title="Rule-wise Pass Count",
     )
-
     fig.update_traces(textposition="outside")
+    fig.update_xaxes(tickangle=-18)
 
-    fig.update_layout(
-        height=390,
-        template="plotly_white",
-        margin=dict(l=20, r=20, t=55, b=80),
-        xaxis_tickangle=-20,
-    )
-
-    return fig
-
-
-def score_distribution_chart(signal_df):
-    fig = px.histogram(
-        signal_df,
-        x="Score %",
-        nbins=5,
-        title="Rule Score Distribution",
-    )
-
-    fig.update_layout(
-        height=360,
-        template="plotly_white",
-        margin=dict(l=20, r=20, t=55, b=20),
-    )
-
-    return fig
+    return apply_chart_layout(fig, 380)
 
 
 def top_score_chart(signal_df):
-    top_df = signal_df.sort_values("Score %", ascending=False).head(20)
+    top_df = signal_df.sort_values("Score %", ascending=False).head(18)
 
     fig = px.bar(
         top_df,
@@ -643,18 +583,10 @@ def top_score_chart(signal_df):
         text="Score %",
         title="Top Stocks by Rule Score",
     )
-
     fig.update_traces(textposition="outside")
+    fig.update_xaxes(tickangle=-45)
 
-    fig.update_layout(
-        height=460,
-        template="plotly_white",
-        margin=dict(l=20, r=20, t=55, b=90),
-        xaxis_tickangle=-45,
-        legend_title_text="",
-    )
-
-    return fig
+    return apply_chart_layout(fig, 430)
 
 
 def equity_curve_chart(portfolio_df):
@@ -664,16 +596,8 @@ def equity_curve_chart(portfolio_df):
         y="Portfolio Value",
         title="Portfolio Value Over Time",
     )
-
     fig.update_traces(line=dict(width=3))
-
-    fig.update_layout(
-        height=420,
-        template="plotly_white",
-        margin=dict(l=20, r=20, t=55, b=20),
-    )
-
-    return fig
+    return apply_chart_layout(fig, 420)
 
 
 def drawdown_chart(portfolio_df):
@@ -683,14 +607,7 @@ def drawdown_chart(portfolio_df):
         y="Drawdown",
         title="Portfolio Drawdown",
     )
-
-    fig.update_layout(
-        height=350,
-        template="plotly_white",
-        margin=dict(l=20, r=20, t=55, b=20),
-    )
-
-    return fig
+    return apply_chart_layout(fig, 340)
 
 
 def candlestick_chart(df, symbol):
@@ -707,26 +624,9 @@ def candlestick_chart(df, symbol):
         name="Price",
     ))
 
-    fig.add_trace(go.Scatter(
-        x=plot_df["Date"],
-        y=plot_df["SMA_50"],
-        mode="lines",
-        name="SMA 50",
-    ))
-
-    fig.add_trace(go.Scatter(
-        x=plot_df["Date"],
-        y=plot_df["SMA_150"],
-        mode="lines",
-        name="SMA 150",
-    ))
-
-    fig.add_trace(go.Scatter(
-        x=plot_df["Date"],
-        y=plot_df["EMA_220"],
-        mode="lines",
-        name="EMA 220",
-    ))
+    fig.add_trace(go.Scatter(x=plot_df["Date"], y=plot_df["SMA_50"], mode="lines", name="SMA 50"))
+    fig.add_trace(go.Scatter(x=plot_df["Date"], y=plot_df["SMA_150"], mode="lines", name="SMA 150"))
+    fig.add_trace(go.Scatter(x=plot_df["Date"], y=plot_df["EMA_220"], mode="lines", name="EMA 220"))
 
     buy_df = plot_df[plot_df["Entry_Signal"] == True]
 
@@ -739,15 +639,8 @@ def candlestick_chart(df, symbol):
             marker=dict(size=10, symbol="triangle-up"),
         ))
 
-    fig.update_layout(
-        title=f"{symbol} Technical Chart",
-        height=620,
-        template="plotly_white",
-        xaxis_rangeslider_visible=False,
-        margin=dict(l=20, r=20, t=55, b=20),
-    )
-
-    return fig
+    fig.update_layout(xaxis_rangeslider_visible=False, title=f"{symbol} Technical Chart")
+    return apply_chart_layout(fig, 610)
 
 
 # ============================================================
@@ -759,10 +652,8 @@ st.markdown(
     <div class="dashboard-header">
         <div class="dashboard-title">Nifty 50 Strategy Dashboard</div>
         <div class="dashboard-subtitle">
-            Professional rule-based screening dashboard for Nifty 50 stocks.
-            Classifies stocks into Buy Candidate, Watchlist, or Avoid using a 4-rule trend and momentum framework.
+            4-rule technical screening model for classifying Nifty 50 stocks into Buy Candidate, Watchlist, or Avoid.
         </div>
-        <div class="strategy-chip">4-Rule Trend Strength Model</div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -794,9 +685,15 @@ watchlist_min_rules = st.sidebar.slider(
 
 st.sidebar.divider()
 
-st.sidebar.metric("Initial Capital", format_inr(INITIAL_CAPITAL))
-st.sidebar.metric("Max Allocation / Stock", format_pct(MAX_POSITION_PCT * 100))
-st.sidebar.metric("Stop Loss", format_pct(STOP_LOSS_PCT * 100))
+st.sidebar.markdown(
+    f"""
+    **Capital Assumptions**
+
+    - Initial Capital: ₹{INITIAL_CAPITAL:,.0f}
+    - Max Allocation / Stock: {MAX_POSITION_PCT * 100:.0f}%
+    - Stop Loss: {STOP_LOSS_PCT * 100:.0f}%
+    """
+)
 
 st.sidebar.divider()
 
@@ -832,14 +729,12 @@ except Exception as e:
     st.error(f"Error reading symbols: {e}")
     st.stop()
 
-c1, c2, c3 = st.columns([1, 1, 2])
-
-c1.metric("Symbols Loaded", len(symbols))
-c2.metric("Universe", "Nifty 50")
-c3.markdown(
+st.markdown(
     f"""
     <div class="info-box">
-    Source file detected: <b>{INPUT_FILE}</b>. Keep the CSV in the same folder as <b>app.py</b>.
+    <b>Data file:</b> {INPUT_FILE} &nbsp; | &nbsp;
+    <b>Universe:</b> Nifty 50 &nbsp; | &nbsp;
+    <b>Symbols loaded:</b> {len(symbols)}
     </div>
     """,
     unsafe_allow_html=True,
@@ -848,28 +743,30 @@ c3.markdown(
 with st.expander("View loaded symbols"):
     st.write(symbols)
 
+btn_col1, btn_col2, btn_col3 = st.columns([1.3, 1, 1.3])
 
-# ============================================================
-# RUN
-# ============================================================
-
-run_dashboard = st.button(
-    "Download Data and Run Dashboard",
-    type="primary",
-    use_container_width=True,
-)
+with btn_col2:
+    run_dashboard = st.button(
+        "Run Dashboard",
+        type="primary",
+        use_container_width=True,
+    )
 
 if not run_dashboard:
     st.markdown(
         """
         <div class="warning-box">
-        Click the button above to fetch latest Yahoo Finance data, classify stocks, generate charts, and run the backtest.
+        Click <b>Run Dashboard</b> to fetch latest Yahoo Finance data, classify stocks, generate charts, and run the backtest.
         </div>
         """,
         unsafe_allow_html=True,
     )
     st.stop()
 
+
+# ============================================================
+# DOWNLOAD DATA
+# ============================================================
 
 stock_data = {}
 failed_downloads = []
@@ -891,11 +788,7 @@ for i, symbol in enumerate(symbols):
         else:
             df = add_indicators(df)
             stock_data[ticker] = df
-
-            df.to_csv(
-                os.path.join(OUTPUT_FOLDER, clean_filename(ticker) + ".csv"),
-                index=False,
-            )
+            df.to_csv(os.path.join(OUTPUT_FOLDER, clean_filename(ticker) + ".csv"), index=False)
 
     except Exception as e:
         failed_downloads.append([symbol, ticker, str(e)])
@@ -927,10 +820,7 @@ buy_df = signal_df[signal_df["Status"] == "BUY CANDIDATE"]
 watchlist_df = signal_df[signal_df["Rules Passed"] >= watchlist_min_rules]
 avoid_df = signal_df[signal_df["Status"] == "AVOID"]
 
-trades_df, portfolio_df = run_backtest(
-    stock_data,
-    backtest_start_date.strftime("%Y-%m-%d"),
-)
+trades_df, portfolio_df = run_backtest(stock_data, backtest_start_date.strftime("%Y-%m-%d"))
 
 if portfolio_df.empty:
     st.error("Backtest could not run because portfolio data is empty.")
@@ -940,7 +830,7 @@ summary = calculate_summary(trades_df, portfolio_df)
 
 
 # ============================================================
-# DASHBOARD KPIs
+# KPI SECTION
 # ============================================================
 
 st.markdown('<div class="section-title">Market Overview</div>', unsafe_allow_html=True)
@@ -956,9 +846,9 @@ k2.metric("Buy Candidates", breadth["Buy Candidates"])
 k3.metric("Watchlist", breadth["Watchlist"])
 k4.metric("Avoid", breadth["Avoid"])
 k5.metric("% Above 50 SMA", format_pct(breadth["% Above 50 SMA"]))
-k6.metric("% Buy Candidates", format_pct(breadth["% Buy Candidates"]))
+k6.metric("% Trend Positive", format_pct(breadth["% Trend Positive"]))
 
-st.markdown('<div class="section-title">Backtest Snapshot</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">Performance Snapshot</div>', unsafe_allow_html=True)
 
 b1, b2, b3, b4, b5, b6 = st.columns(6)
 
@@ -971,12 +861,28 @@ b6.metric("Profit Factor", summary["Profit Factor"])
 
 
 # ============================================================
+# MAIN CHARTS
+# ============================================================
+
+st.markdown('<div class="section-title">Signal Analytics</div>', unsafe_allow_html=True)
+
+chart_col1, chart_col2 = st.columns(2)
+
+with chart_col1:
+    st.plotly_chart(status_donut_chart(signal_df), use_container_width=True)
+
+with chart_col2:
+    st.plotly_chart(rule_pass_chart(signal_df), use_container_width=True)
+
+st.plotly_chart(top_score_chart(signal_df), use_container_width=True)
+
+
+# ============================================================
 # TABS
 # ============================================================
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(
+tab1, tab2, tab3, tab4 = st.tabs(
     [
-        "Overview Charts",
         "Signals",
         "Backtest",
         "Stock Analysis",
@@ -985,40 +891,8 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(
 )
 
 
-# ============================================================
-# TAB 1
-# ============================================================
-
 with tab1:
-    st.markdown('<div class="section-title">Signal Analytics</div>', unsafe_allow_html=True)
-
-    chart_col1, chart_col2 = st.columns(2)
-
-    with chart_col1:
-        st.plotly_chart(status_donut_chart(signal_df), use_container_width=True)
-
-    with chart_col2:
-        st.plotly_chart(rule_pass_chart(signal_df), use_container_width=True)
-
-    chart_col3, chart_col4 = st.columns(2)
-
-    with chart_col3:
-        st.plotly_chart(score_distribution_chart(signal_df), use_container_width=True)
-
-    with chart_col4:
-        st.plotly_chart(top_score_chart(signal_df), use_container_width=True)
-
-
-# ============================================================
-# TAB 2
-# ============================================================
-
-with tab2:
     st.markdown('<div class="section-title">Buy Candidates</div>', unsafe_allow_html=True)
-    st.markdown(
-        '<div class="section-caption">Stocks passing all 4 strategy rules.</div>',
-        unsafe_allow_html=True,
-    )
 
     if buy_df.empty:
         st.warning("No 4/4 buy candidates found today.")
@@ -1026,10 +900,6 @@ with tab2:
         st.dataframe(buy_df, use_container_width=True)
 
     st.markdown('<div class="section-title">Watchlist</div>', unsafe_allow_html=True)
-    st.markdown(
-        '<div class="section-caption">Stocks passing the selected minimum number of rules.</div>',
-        unsafe_allow_html=True,
-    )
 
     if watchlist_df.empty:
         st.warning("No watchlist stocks found.")
@@ -1040,11 +910,7 @@ with tab2:
     st.dataframe(signal_df, use_container_width=True)
 
 
-# ============================================================
-# TAB 3
-# ============================================================
-
-with tab3:
+with tab2:
     st.markdown('<div class="section-title">Backtest Performance</div>', unsafe_allow_html=True)
 
     st.plotly_chart(equity_curve_chart(portfolio_df), use_container_width=True)
@@ -1061,18 +927,10 @@ with tab3:
     st.dataframe(portfolio_df, use_container_width=True)
 
 
-# ============================================================
-# TAB 4
-# ============================================================
-
-with tab4:
+with tab3:
     st.markdown('<div class="section-title">Stock-Level Analysis</div>', unsafe_allow_html=True)
 
-    selected_symbol = st.selectbox(
-        "Select stock",
-        options=list(stock_data.keys()),
-    )
-
+    selected_symbol = st.selectbox("Select stock", options=list(stock_data.keys()))
     selected_df = stock_data[selected_symbol]
     latest = selected_df.iloc[-1]
 
@@ -1099,11 +957,7 @@ with tab4:
     st.dataframe(latest_rules_df, use_container_width=True)
 
 
-# ============================================================
-# TAB 5
-# ============================================================
-
-with tab5:
+with tab4:
     st.markdown('<div class="section-title">Download Outputs</div>', unsafe_allow_html=True)
 
     d1, d2, d3 = st.columns(3)
